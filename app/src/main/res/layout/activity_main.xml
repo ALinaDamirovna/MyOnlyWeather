@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/Hello"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="start"
+            android:layout_weight="60"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="Get Your Location ->"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLocalisation"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="40"
+            android:background="@drawable/background_item"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Get Location"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:iconTint="#C14444" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etCityName"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="60"
+            android:background="@drawable/background_item"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="Search by City Name.."
+            android:paddingLeft="10dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="?attr/colorOnPrimary"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="40"
+            android:background="@drawable/background_item"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Search"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:iconTint="#C14444" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/background_fix_part"
+        android:orientation="horizontal"
+        android:id="@+id/MainPart">
+
+        <ImageView
+            android:id="@+id/iconWeather"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/background_fix_part"
+            android:padding="20dp"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="40sp"
+                android:textStyle="bold|italic"
+                tools:text="20 °C" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="26sp"
+                tools:text="Landon, US" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvDailyWeather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
